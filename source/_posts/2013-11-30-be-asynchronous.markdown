@@ -3,7 +3,7 @@ layout: post
 title: "BE ASYNCHRONOUS"
 date: 2013-11-30 07:53:57 +0800
 comments: true
-categories: 
+categories: work
 ---
 上次的团队分享中，跟大家分享了github的异步的工作方式。把大家的建议总结一下，并发起一个倡议。希望大家可以遵守并形成我们自己的异步的工作方式。
 
