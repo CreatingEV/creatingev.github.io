@@ -4,6 +4,7 @@ title: "splitting a fat model into multiple files"
 date: 2013-12-04 18:07:10 +0800
 comments: true
 categories: rails
+author: 黄祥旦
 ---
 ##起因
 Rails的应用内，总有一些超级复杂的model，比如User。而正因是**胖model,瘦controller**这样的指导思想，会导致一些model臃肿不堪，有些model甚至会超过1000行，而一旦超过1000行，一个类的代码就变得难以维护了。所以一段时间内，我们为了不让我们的model太臃肿，我们只能不往User里面写代码，而把一些代码写在其他的model里面。比如写成如下的方式

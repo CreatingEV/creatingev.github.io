@@ -4,6 +4,7 @@ title: "support emoji in rails 3.2.14"
 date: 2013-11-27 09:29:23 +0800
 comments: true
 categories: rails
+author: 黄祥旦
 ---
 本文主要参考一片日文的文章[Rails 3.2でiOS5の絵文字を扱う](http://qiita.com/ikm/items/7ac0c32c5264eac2b8bb)，实践并修改完成。让你的应用可以支持emoji，需要达到以下几点要求
 
@@ -20,6 +21,8 @@ MySQL 5.5.3以上已经支持了utf8mb4的字符集，所以如果你的MySQL是
 	[mysqld]
 	collation-server = utf8mb4_unicode_ci
 	character-set-server = utf8mb4
+  init_connect='SET NAMES utf8mb4'
+
 在修改完my.conf配置之后，重启mysql，检查字符集是否已经更改，除了``character_set_system``和``character_set_filesystem``之外，其他的字符集都需要变成utf8mb4类型。
 	
 	mysql> show variables like 'char%';

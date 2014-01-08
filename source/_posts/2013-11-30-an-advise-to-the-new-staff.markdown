@@ -4,6 +4,7 @@ title: "an advise to the new staff"
 date: 2013-11-30 06:43:21 +0800
 comments: true
 categories: work
+author: 黄祥旦
 ---
 hi，新来的同学，欢迎加入我们的团队。
 
