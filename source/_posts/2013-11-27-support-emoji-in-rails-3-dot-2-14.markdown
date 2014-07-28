@@ -21,7 +21,7 @@ MySQL 5.5.3以上已经支持了utf8mb4的字符集，所以如果你的MySQL是
 	[mysqld]
 	collation-server = utf8mb4_unicode_ci
 	character-set-server = utf8mb4
-  init_connect='SET NAMES utf8mb4'
+	init_connect='SET NAMES utf8mb4'
 
 在修改完my.conf配置之后，重启mysql，检查字符集是否已经更改，除了``character_set_system``和``character_set_filesystem``之外，其他的字符集都需要变成utf8mb4类型。
 	
