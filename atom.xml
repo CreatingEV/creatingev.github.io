@@ -1,103 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>课程格子黑板报</title>
-  <meta name="author" content="CreatingEV">
-
-  
-  <meta name="description" content="第一部分 Rack 什么是rack Rack 为开发 Ruby web 应用提供了一个最小的模块化和适应性接口。通过对 HTTP 请求与响应 的尽可能最简单的方式包装，它统一和提炼 Web 服务器 ，Web 框架，和之间的软件（所谓的中间件）的 API 为单一方法调用。 什么是rack app A &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://creatingev.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="课程格子黑板报" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">课程格子黑板报</a></h1>
-  
-    <h2>Blog of CreatingEV Dev Team</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:creatingev.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[课程格子黑板报]]></title>
+  <link href="http://creatingev.github.io/atom.xml" rel="self"/>
+  <link href="http://creatingev.github.io/"/>
+  <updated>2014-07-28T10:51:58+08:00</updated>
+  <id>http://creatingev.github.io/</id>
+  <author>
+    <name><![CDATA[CreatingEV]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2014/01/12/rails-serverhou-bian-yin-cang-de-zhen-xiang/">Rails_server后边隐藏的真相</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2014-01-12T01:38:40+08:00" pubdate data-updated="true">Jan 12<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/01/12/rails-serverhou-bian-yin-cang-de-zhen-xiang/#disqus_thread"
-             data-disqus-identifier="http://creatingev.github.io/blog/2014/01/12/rails-serverhou-bian-yin-cang-de-zhen-xiang/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>第一部分 Rack</h2>
+  <entry>
+    <title type="html"><![CDATA[Rails_server后边隐藏的真相]]></title>
+    <link href="http://creatingev.github.io/blog/2014/01/12/rails-serverhou-bian-yin-cang-de-zhen-xiang/"/>
+    <updated>2014-01-12T01:38:40+08:00</updated>
+    <id>http://creatingev.github.io/blog/2014/01/12/rails-serverhou-bian-yin-cang-de-zhen-xiang</id>
+    <content type="html"><![CDATA[<h2>第一部分 Rack</h2>
 
 <h3>什么是rack</h3>
 
@@ -561,45 +482,15 @@ tokens是最大连接数量（并发数量）。</p>
 <p>一般的使用情况下server都是self，lookup_server与virtual_hosts有关。server.service就是self.service，其中，找到了真正的servlet的实例，并调用实例的service方法。其中可以看看mount方法的作用：可以把不同的servlet mount不同的url上，形成一个路由表。</p>
 
 <p>rack的webrick handler就是一个webrick servlet，并且复写了service这个方法。server.service(req, res)调用完毕，那么response的各个属性也就填好了，接着<code>res.send_response(sock)</code>会通过socket来发送数据。</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/01/08/chat-server-performance-tune/">一次聊天服务器性能调优经历分享</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-01-08T08:48:28+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2014</time>
-        
-           | <a href="/blog/2014/01/08/chat-server-performance-tune/#disqus_thread"
-             data-disqus-identifier="http://creatingev.github.io/blog/2014/01/08/chat-server-performance-tune/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>导读：<br/>
+  <entry>
+    <title type="html"><![CDATA[一次聊天服务器性能调优经历分享]]></title>
+    <link href="http://creatingev.github.io/blog/2014/01/08/chat-server-performance-tune/"/>
+    <updated>2014-01-08T08:48:28+08:00</updated>
+    <id>http://creatingev.github.io/blog/2014/01/08/chat-server-performance-tune</id>
+    <content type="html"><![CDATA[<p>导读：<br/>
 这是我的一次性能调优经历的分享，我的本意不是分享我调优所获得的知识与经验，而是希望可以启发大家的思考。如天放所说，其实最有效完成一个目标的方式是用二分法，逐步找到问题的解决办法。但二分法的本质是趋利避害，是以目标为导向的方法，追求最短时间解决一个问题，追求最易解决问题的办法。二分法可能是高效地解决问题的好办法，但却不是学习的好方法。</p>
 
 <p>“名人哲言”里有一句话，“上帝若為你關了一扇門，必然為你開另一扇門”，在这里，恰恰相反，“当你开了一扇门，你必然会关上另外一扇门”。当你用二分法解决了你的问题，并为此窃喜之时，或许被你关上的无数扇门了有你追求了许久的宝藏，这些宝藏一次次与你擦肩而过。从长远的角度来讲，二分法不见得是最高效的办法。</p>
@@ -619,45 +510,15 @@ tokens是最大连接数量（并发数量）。</p>
 <hr />
 
 <p>ppt内容预览下载地址（可以用上一页，下一页翻页，这样就像ppt了）：<a href="http://pan.baidu.com/s/1sjybu8X">http://pan.baidu.com/s/1sjybu8X</a></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/04/splitting-a-fat-model-into-multiple-files/">Splitting a Fat Model Into Multiple Files</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-04T18:07:10+08:00" pubdate data-updated="true">Dec 4<span>th</span>, 2013</time>
-        
-           | <a href="/blog/2013/12/04/splitting-a-fat-model-into-multiple-files/#disqus_thread"
-             data-disqus-identifier="http://creatingev.github.io/blog/2013/12/04/splitting-a-fat-model-into-multiple-files/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2>起因</h2>
+  <entry>
+    <title type="html"><![CDATA[Splitting a Fat Model Into Multiple Files]]></title>
+    <link href="http://creatingev.github.io/blog/2013/12/04/splitting-a-fat-model-into-multiple-files/"/>
+    <updated>2013-12-04T18:07:10+08:00</updated>
+    <id>http://creatingev.github.io/blog/2013/12/04/splitting-a-fat-model-into-multiple-files</id>
+    <content type="html"><![CDATA[<h2>起因</h2>
 
 <p>Rails的应用内，总有一些超级复杂的model，比如User。而正因是<strong>胖model,瘦controller</strong>这样的指导思想，会导致一些model臃肿不堪，有些model甚至会超过1000行，而一旦超过1000行，一个类的代码就变得难以维护了。所以一段时间内，我们为了不让我们的model太臃肿，我们只能不往User里面写代码，而把一些代码写在其他的model里面。比如写成如下的方式</p>
 
@@ -801,45 +662,15 @@ end
 <li><a href="https://37signals.com/svn/posts/3372-put-chubby-models-on-a-diet-with-concerns">Put chubby models on a diet with concerns</a></li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/12/03/something-about-probability/">一定会发生和一定不会发生的事情</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-12-03T06:25:41+08:00" pubdate data-updated="true">Dec 3<span>rd</span>, 2013</time>
-        
-           | <a href="/blog/2013/12/03/something-about-probability/#disqus_thread"
-             data-disqus-identifier="http://creatingev.github.io/blog/2013/12/03/something-about-probability/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>谈起这个话题，原因是我的一次愚蠢的尝试。我曾经在一个游戏中用虚拟积分玩过这样的游戏，我先用1个积分去投注，如果输了，我就翻倍去投注，直到我输光为止。而我不相信我能连输十盘，我觉得那是一个不可能发生的事情。结果很明显，我为了赚一个积分，把我的所有积分都输光了。所以从这点出发，我觉得有必要去正视什么是一定会发生的事情，什么是一定不会发生的事情，两者的边界是什么？</p>
+  <entry>
+    <title type="html"><![CDATA[一定会发生和一定不会发生的事情]]></title>
+    <link href="http://creatingev.github.io/blog/2013/12/03/something-about-probability/"/>
+    <updated>2013-12-03T06:25:41+08:00</updated>
+    <id>http://creatingev.github.io/blog/2013/12/03/something-about-probability</id>
+    <content type="html"><![CDATA[<p>谈起这个话题，原因是我的一次愚蠢的尝试。我曾经在一个游戏中用虚拟积分玩过这样的游戏，我先用1个积分去投注，如果输了，我就翻倍去投注，直到我输光为止。而我不相信我能连输十盘，我觉得那是一个不可能发生的事情。结果很明显，我为了赚一个积分，把我的所有积分都输光了。所以从这点出发，我觉得有必要去正视什么是一定会发生的事情，什么是一定不会发生的事情，两者的边界是什么？</p>
 
 <h2>一定会发生的事情</h2>
 
@@ -919,45 +750,15 @@ n   机率
 <li><a href="http://zh.wikipedia.org/w/index.php?title=UUID&amp;variant=zh-cn">UUID</a></li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/30/what-we-really-care/">我们真正关心的事情</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-30T09:13:54+08:00" pubdate data-updated="true">Nov 30<span>th</span>, 2013</time>
-        
-           | <a href="/blog/2013/11/30/what-we-really-care/#disqus_thread"
-             data-disqus-identifier="http://creatingev.github.io/blog/2013/11/30/what-we-really-care/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>如果你是位新员工，你可能会有一些困惑，我们没有代码规范，却要求你代码应该这么写，而不应该那么写，相同的，我们会建议你有些事情应该这样做，而不是那么做。你不知道到底哪些事情才是最重要的，在不知道优先级的情况下，你可能会犯一些错误，你会让你感到很沮丧。所以，从一个更严谨的角度，我应该把我们真正在乎的事情全都告诉你。
+  <entry>
+    <title type="html"><![CDATA[我们真正关心的事情]]></title>
+    <link href="http://creatingev.github.io/blog/2013/11/30/what-we-really-care/"/>
+    <updated>2013-11-30T09:13:54+08:00</updated>
+    <id>http://creatingev.github.io/blog/2013/11/30/what-we-really-care</id>
+    <content type="html"><![CDATA[<p>如果你是位新员工，你可能会有一些困惑，我们没有代码规范，却要求你代码应该这么写，而不应该那么写，相同的，我们会建议你有些事情应该这样做，而不是那么做。你不知道到底哪些事情才是最重要的，在不知道优先级的情况下，你可能会犯一些错误，你会让你感到很沮丧。所以，从一个更严谨的角度，我应该把我们真正在乎的事情全都告诉你。
 我们真正在乎的事情是：</p>
 
 <ul>
@@ -1044,45 +845,15 @@ n   机率
 <li><a href="blog/2013/11/30/be-asynchronous/">be asynchronous</a></li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/30/be-asynchronous/">BE ASYNCHRONOUS</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-30T07:53:57+08:00" pubdate data-updated="true">Nov 30<span>th</span>, 2013</time>
-        
-           | <a href="/blog/2013/11/30/be-asynchronous/#disqus_thread"
-             data-disqus-identifier="http://creatingev.github.io/blog/2013/11/30/be-asynchronous/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>上次的团队分享中，跟大家分享了github的异步的工作方式。把大家的建议总结一下，并发起一个倡议。希望大家可以遵守并形成我们自己的异步的工作方式。</p>
+  <entry>
+    <title type="html"><![CDATA[BE ASYNCHRONOUS]]></title>
+    <link href="http://creatingev.github.io/blog/2013/11/30/be-asynchronous/"/>
+    <updated>2013-11-30T07:53:57+08:00</updated>
+    <id>http://creatingev.github.io/blog/2013/11/30/be-asynchronous</id>
+    <content type="html"><![CDATA[<p>上次的团队分享中，跟大家分享了github的异步的工作方式。把大家的建议总结一下，并发起一个倡议。希望大家可以遵守并形成我们自己的异步的工作方式。</p>
 
 <p>异步的工作方式的优点不言而喻，缩短等待（block）的时间，不会打扰其他人的工作。而这两点归根结底，会影响团队的工作效率，而效率，是一个团队，尤其是创业团队的命根子。</p>
 
@@ -1138,45 +909,15 @@ n   机率
 <li><a href="http://zachholman.com/posts/how-github-works-asynchronous/">HOW GITHUB WORKS: BE ASYNCHRONOUS</a></li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/30/an-advise-to-the-new-staff/">An Advise to the New Staff</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-30T06:43:21+08:00" pubdate data-updated="true">Nov 30<span>th</span>, 2013</time>
-        
-           | <a href="/blog/2013/11/30/an-advise-to-the-new-staff/#disqus_thread"
-             data-disqus-identifier="http://creatingev.github.io/blog/2013/11/30/an-advise-to-the-new-staff/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>hi，新来的同学，欢迎加入我们的团队。</p>
+  <entry>
+    <title type="html"><![CDATA[An Advise to the New Staff]]></title>
+    <link href="http://creatingev.github.io/blog/2013/11/30/an-advise-to-the-new-staff/"/>
+    <updated>2013-11-30T06:43:21+08:00</updated>
+    <id>http://creatingev.github.io/blog/2013/11/30/an-advise-to-the-new-staff</id>
+    <content type="html"><![CDATA[<p>hi，新来的同学，欢迎加入我们的团队。</p>
 
 <p>我们是一个甚少约束的公司，你可以自由选择自己的工作时间，自由选择自己的工作方式，在保证效率的前提下，你几乎可做任何尝试，比如站着办公，比如去不受打扰的房间一个人待着。（虽然除了我和天放，几乎没有人这样做过，但实际上我希望大家这么做，希望每个人都可以找到属于的自己的高效率的钥匙），甚至可以在家办公（你可以尝试，我尝试过，但效果不佳）。</p>
 
@@ -1201,45 +942,15 @@ n   机率
 <p>总而言之，就是对自己的成果负责，不要让其他人去发现你的低级的错误。请记住，这是最最重要的一点，如果你多次犯了这样的错误，我们对你会是零容忍的态度。（原则的事情需要说在前面，希望这样的事情永远不会发生）至于其他，语言，习惯上的，你可以慢慢适应。</p>
 
 <p>最后，希望你可以在这里找到快乐。（Be Happy here）.</p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/11/27/support-emoji-in-rails-3-dot-2-14/">Support Emoji in Rails 3.2.14</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-11-27T09:29:23+08:00" pubdate data-updated="true">Nov 27<span>th</span>, 2013</time>
-        
-           | <a href="/blog/2013/11/27/support-emoji-in-rails-3-dot-2-14/#disqus_thread"
-             data-disqus-identifier="http://creatingev.github.io/blog/2013/11/27/support-emoji-in-rails-3-dot-2-14/">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>本文主要参考一片日文的文章<a href="http://qiita.com/ikm/items/7ac0c32c5264eac2b8bb">Rails 3.2でiOS5の絵文字を扱う</a>，实践并修改完成。让你的应用可以支持emoji，需要达到以下几点要求</p>
+  <entry>
+    <title type="html"><![CDATA[Support Emoji in Rails 3.2.14]]></title>
+    <link href="http://creatingev.github.io/blog/2013/11/27/support-emoji-in-rails-3-dot-2-14/"/>
+    <updated>2013-11-27T09:29:23+08:00</updated>
+    <id>http://creatingev.github.io/blog/2013/11/27/support-emoji-in-rails-3-dot-2-14</id>
+    <content type="html"><![CDATA[<p>本文主要参考一片日文的文章<a href="http://qiita.com/ikm/items/7ac0c32c5264eac2b8bb">Rails 3.2でiOS5の絵文字を扱う</a>，实践并修改完成。让你的应用可以支持emoji，需要达到以下几点要求</p>
 
 <ol>
 <li>数据库支持emoji(utf8mb4)</li>
@@ -1428,126 +1139,7 @@ end
 <li><a href="http://blog.sosedoff.com/2012/04/26/emoji-and-rails-json-output-issue/">Emoji and Rails JSON output issue</a></li>
 </ul>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/01/12/rails-serverhou-bian-yin-cang-de-zhen-xiang/">Rails_server后边隐藏的真相</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/01/08/chat-server-performance-tune/">一次聊天服务器性能调优经历分享</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/12/04/splitting-a-fat-model-into-multiple-files/">Splitting a Fat Model Into Multiple Files</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/12/03/something-about-probability/">一定会发生和一定不会发生的事情</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/11/30/what-we-really-care/">我们真正关心的事情</a>
-      </li>
-    
-  </ul>
-</section>
-
-<section>
-  <h1>GitHub Repos</h1>
-  <ul id="gh_repos">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  
-  <a href="https://github.com/creatingev">@creatingev</a> on GitHub
-  
-  <script type="text/javascript">
-    $(document).ready(function(){
-        if (!window.jXHR){
-            var jxhr = document.createElement('script');
-            jxhr.type = 'text/javascript';
-            jxhr.src = '/javascripts/libs/jXHR.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(jxhr, s);
-        }
-
-        github.showRepos({
-            user: 'creatingev',
-            count: 0,
-            skip_forks: true,
-            target: '#gh_repos'
-        });
-    });
-  </script>
-  <script src="/javascripts/github.js" type="text/javascript"> </script>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - CreatingEV -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-<script type="text/javascript">
-      var disqus_shortname = 'CreatingEVDev';
-      
-        
-        var disqus_script = 'count.js';
-      
-    (function () {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-</script>
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>
